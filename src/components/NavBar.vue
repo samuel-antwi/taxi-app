@@ -1,6 +1,18 @@
 <script setup lang="ts">
   import ThemeToggler from "@/components/ThemeToggler.vue"
   import IconTaxi from "@/components/icons/IconTaxi.vue"
+  import { useUser } from "@/stores/useUser"
+  import supabase from "@/lib/supabase"
+  import { computed } from "vue"
+
+  const userStore = useUser()
+
+  const user = computed(() => userStore.user)
+
+  // Sign out user
+  const handleSignOut = async () => {
+    return await supabase.auth.signOut()
+  }
 </script>
 
 <template>
@@ -17,8 +29,11 @@
           class="items-center justify-between hidden md:flex space-x-7"
         >
           <router-link to="/about">About</router-link>
-          <router-link to="/about">Account</router-link>
-          <router-link to="/about">Sign In</router-link>
+          <router-link to="/account">Account</router-link>
+          <router-link v-if="!user" to="/login">Sign In</router-link>
+          <button @click="handleSignOut" v-if="user" type="button">
+            Sign Out
+          </button>
         </div>
         <ThemeToggler />
       </div>
