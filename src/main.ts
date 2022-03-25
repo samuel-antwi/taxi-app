@@ -10,17 +10,17 @@ import { watch } from "vue"
 const pinia = createPinia()
 const app = createApp(App)
 
-// if (localStorage.getItem("state")) {
-//   pinia.state.value = JSON.parse(localStorage.getItem("state"))
-// }
+if (localStorage.getItem("state")) {
+  pinia.state.value = JSON.parse(localStorage.getItem("state"))
+}
 
-// watch(
-//   pinia.state,
-//   (state) => {
-//     localStorage.setItem("state", JSON.stringify(state))
-//   },
-//   { deep: true }
-// )
+watch(
+  pinia.state,
+  (state) => {
+    localStorage.setItem("state", JSON.stringify(state))
+  },
+  { deep: true }
+)
 
 app.use(pinia)
 app.use(router)

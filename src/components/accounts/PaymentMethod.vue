@@ -1,6 +1,9 @@
 <script setup lang="ts">
   import IconPayment from "~icons/mdi/credit-card-outline"
   import { useTabs } from "@/composables/useTabs"
+  import PaypalPayment from "./payments/PaypalPayment.vue"
+  import ApplePay from "./payments/ApplePay.vue"
+  import GooglePay from "./payments/GooglePay.vue"
 
   const { activeTab } = useTabs()
 </script>
@@ -8,7 +11,7 @@
 <template>
   <div
     v-show="activeTab === 'Payment methods'"
-    class="p-8 bg-white shadow-lg account-payment"
+    class="p-8 bg-gray-100 shadow-lg account-payment"
   >
     <div>
       <icon-payment class="mb-4 text-4xl" />
@@ -20,6 +23,9 @@
       <p class="pt-4 mb-8 text-gray-700">
         Below are your payment methods.
       </p>
+      <paypal-payment />
+      <apple-pay />
+      <google-pay />
     </div>
   </div>
 </template>

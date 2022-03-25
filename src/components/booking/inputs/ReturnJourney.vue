@@ -1,25 +1,30 @@
 <script setup lang="ts">
   import { useBookingsStore } from "@/stores/useBookings"
+  import { Switch } from "@headlessui/vue"
   const store = useBookingsStore()
   const journeyDetails = store.journeyDetails
-
-  const toggleReturn = () => {
-    journeyDetails.returnjourney = !journeyDetails.returnjourney
-  }
 </script>
 
 <template>
-  <div class="flex items-center py-8 space-x-4">
+  <div class="flex items-center mb-3 space-x-4 md:mb-0">
     <h3>Return journey ?</h3>
-    <div class="form-control">
-      <label class="cursor-pointer label">
-        <input
-          @change="toggleReturn"
-          type="checkbox"
-          :checked="journeyDetails.returnjourney"
-          class="checkbox checkbox-primary"
-        />
-      </label>
-    </div>
+    <Switch
+      v-model="journeyDetails.returnJourney"
+      :class="
+        journeyDetails.returnJourney
+          ? 'bg-indigo-600'
+          : 'dark:bg-at-dark-primary bg-gray-300 dark:border border-gray-600'
+      "
+      class="relative inline-flex items-center w-12 transition-colors rounded-full h-7 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+    >
+      <span
+        :class="
+          journeyDetails.returnJourney
+            ? 'translate-x-6'
+            : 'translate-x-1'
+        "
+        class="inline-block w-4 h-4 transition-transform transform bg-white rounded-full"
+      />
+    </Switch>
   </div>
 </template>

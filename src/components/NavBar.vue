@@ -16,7 +16,7 @@
 </script>
 
 <template>
-  <nav class="fixed top-0 w-full py-4 shadow-md nav">
+  <nav class="fixed top-0 w-full py-2 shadow-md nav">
     <div
       class="flex items-center justify-between max-w-6xl px-4 mx-auto"
     >
@@ -29,7 +29,9 @@
           class="items-center justify-between hidden md:flex space-x-7"
         >
           <router-link to="/about">About</router-link>
-          <router-link to="/account">Account</router-link>
+          <router-link to="/my-account/my-details"
+            >Account</router-link
+          >
           <router-link v-if="!user" to="/login">Sign In</router-link>
           <button @click="handleSignOut" v-if="user" type="button">
             Sign Out

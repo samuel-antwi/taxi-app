@@ -9,10 +9,12 @@
 </script>
 
 <template>
-  <div class="py-12 bg-white shadow-md">
+  <div
+    class="py-12 bg-white border-gray-500 rounded-lg shadow-md dark:text-gray-200 dark:border dark:bg-at-dark-primary"
+  >
     <div class="flex items-center">
       <div
-        class="flex items-center justify-center -ml-3 text-gray-100 bg-gray-800 rounded-full h-28 w-28"
+        class="flex items-center justify-center -ml-3 text-gray-100 bg-gray-800 rounded-full dark:text-gray-200 h-28 w-28"
       >
         <h1
           v-if="
@@ -29,9 +31,9 @@
         </h1>
         <icon-user v-else class="text-2xl" />
       </div>
-      <div class="ml-3">
+      <div class="ml-3 dark:text-gray-400">
         <h2 class="text-lg">Hi,</h2>
-        <div class="font-semibold text-gray-700">
+        <div class="font-semibold text-gray-700 dark:text-gray-400">
           <span class="mr-2 text-xl tracking-wider">{{
             userProfile.profile.firstName
           }}</span>

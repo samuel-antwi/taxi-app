@@ -34,6 +34,30 @@ const router = createRouter({
         auth: true,
       },
     },
+    {
+      path: "/my-account/my-bookings",
+      name: "bookings",
+      component: () => import("@/views/BookingsView.vue"),
+      meta: {
+        auth: true,
+      },
+    },
+    {
+      path: "/my-account/payment-methods",
+      name: "payment",
+      component: () => import("@/views/PaymentMethods.vue"),
+      meta: {
+        auth: true,
+      },
+    },
+    {
+      path: "/my-account/my-details",
+      name: "my-account",
+      component: () => import("@/views/AccountDetails.vue"),
+      meta: {
+        auth: true,
+      },
+    },
   ],
 })
 

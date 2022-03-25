@@ -6,7 +6,7 @@
 
 <template>
   <div
-    v-if="journeyDetails.returnjourney"
+    v-if="journeyDetails.returnJourney"
     class="flex flex-col w-full"
   >
     <label class="mb-1 text-sm font-semibold uppercase" for="time"

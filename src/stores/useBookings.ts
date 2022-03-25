@@ -17,7 +17,7 @@ export const useBookingsStore = defineStore("booking", {
       date: "",
       time: "",
       numberOfPassengers: 1,
-      returnjourney: false,
+      returnJourney: false,
       returnDate: "",
       returnTime: "",
       paymentMethod: [
