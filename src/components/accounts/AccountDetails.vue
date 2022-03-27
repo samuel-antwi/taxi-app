@@ -39,7 +39,7 @@
         <form class="w-full md:w-8/12" @submit.prevent="handleUpdate">
           <div class="flex flex-col mb-6">
             <label
-              class="mb-3 font-semibold tracking-wider text-gray-600 uppercase"
+              class="mb-3 tracking-wider uppercase"
               for="first name"
               >First name:</label
             >
@@ -52,7 +52,7 @@
           </div>
           <div class="flex flex-col mb-6">
             <label
-              class="mb-3 font-semibold tracking-wider text-gray-600 uppercase"
+              class="mb-3 tracking-wider uppercase"
               for="last name"
               >Last name:</label
             >
@@ -64,9 +64,7 @@
             />
           </div>
           <div class="flex flex-col mb-6">
-            <label
-              class="mb-3 font-semibold tracking-wider text-gray-600 uppercase"
-              for="email"
+            <label class="mb-3 tracking-wider uppercase" for="email"
               >Email address:</label
             >
             <input
@@ -77,9 +75,7 @@
             />
           </div>
           <div class="flex flex-col mb-6">
-            <label
-              class="mb-3 font-semibold tracking-wider text-gray-600 uppercase"
-              for="mobile"
+            <label class="mb-3 tracking-wider uppercase" for="mobile"
               >Mobile phone:</label
             >
             <input

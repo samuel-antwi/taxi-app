@@ -3,15 +3,16 @@
   import { useRoute } from "vue-router"
 
   const route = useRoute()
-  console.log(route.name)
 </script>
 
 <template>
   <router-link
-    v-bind:class="{ active: route.name === 'payment' }"
+    v-bind:class="{
+      active: route.path.includes('payment-methods'),
+    }"
     to="/my-account/payment-methods"
     type="button"
-    class="flex items-center w-full p-6 mb-2 bg-white border-gray-500 shadow-md dark:bg-at-dark-primary dark:border"
+    class="flex items-center w-full p-6 mb-2 bg-white shadow-md hover:bg-gray-100 dark:bg-at-dark-primary dark:border"
   >
     <icon-payment class="mr-4 text-2xl" />
     <h1 class="text-lg">Payment methods</h1>

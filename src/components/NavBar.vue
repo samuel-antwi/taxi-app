@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import ThemeToggler from "@/components/ThemeToggler.vue"
-  import IconTaxi from "@/components/icons/IconTaxi.vue"
+  // import IconTaxi from "@/components/icons/IconTaxi.vue"
+  import IconTaxi from "~icons/mdi/taxi"
   import { useUser } from "@/stores/useUser"
   import supabase from "@/lib/supabase"
   import { computed } from "vue"
@@ -16,12 +17,14 @@
 </script>
 
 <template>
-  <nav class="fixed top-0 w-full py-2 shadow-md nav">
+  <nav
+    class="fixed top-0 w-full py-3 text-gray-200 shadow-md bg-at-dark-secondary nav"
+  >
     <div
       class="flex items-center justify-between max-w-6xl px-4 mx-auto"
     >
       <router-link to="/">
-        <IconTaxi />
+        <icon-taxi class="text-4xl" />
       </router-link>
 
       <div class="items-center justify-between md:flex space-x-7">

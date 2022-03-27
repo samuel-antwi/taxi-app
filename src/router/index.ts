@@ -58,6 +58,22 @@ const router = createRouter({
         auth: true,
       },
     },
+    {
+      path: "/my-account/payment-methods/add",
+      name: "add-payment-method",
+      component: () => import("@/views/AddPaymentMethod.vue"),
+      meta: {
+        auth: true,
+      },
+    },
+    {
+      path: "/my-account/payment-methods/add/card",
+      name: "card",
+      component: () => import("@/views/AddPaymentByCard.vue"),
+      meta: {
+        auth: true,
+      },
+    },
   ],
 })
 

@@ -1,6 +1,8 @@
 <script setup lang="ts">
   import { useBookingsStore } from "@/stores/useBookings"
+  import IconCalendar from "~icons/mdi/calendar-range"
   const store = useBookingsStore()
+
   const journeyDetails = store.journeyDetails
 </script>
 
@@ -10,14 +12,14 @@
     class="flex flex-col w-full"
   >
     <label class="mb-1 text-sm font-semibold uppercase" for="date"
-      >Return Date</label
+      >Return Date and time</label
     >
     <div class="relative">
-      <input
+      <date-picker
+        class="relative"
         v-model="journeyDetails.returnDate"
-        class="w-full py-3 dark:bg-at-dark-input dark:border-gray-500"
-        type="date"
       />
+      <icon-calendar class="absolute right-5 top-[35%]" />
     </div>
   </div>
 </template>

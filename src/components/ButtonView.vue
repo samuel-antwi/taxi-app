@@ -5,9 +5,17 @@
 </script>
 
 <template>
-  <button class="btn-1">
+  <button class="tracking-wider btn-1">
     {{ props.text }}
   </button>
 </template>
 
-<style></style>
+<style scoped lang="scss">
+  button {
+    transition: 200ms ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+</style>

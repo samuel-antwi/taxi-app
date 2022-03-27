@@ -7,9 +7,7 @@
   import PickupInput from "@/components/booking/inputs/PickupInput.vue"
   import DestinationInput from "./inputs/DestinationInput.vue"
   import PickupDate from "./inputs/PickupDate.vue"
-  import PickupTime from "./inputs/PickupTime.vue"
   import ReturnDate from "./inputs/ReturnDate.vue"
-  import ReturnTime from "./inputs/ReturnTime.vue"
   import ReturnJourney from "./inputs/ReturnJourney.vue"
   import BookingHeader from "./BookingHeader.vue"
   import PassengersInput from "@/components/booking/inputs/PassengersInput.vue"
@@ -45,20 +43,18 @@
     <div v-if="isLoading"></div>
     <div v-else>
       <div
-        class="max-w-2xl p-6 rounded-md shadow-md md:p-10 dark:bg-at-dark-secondary bg-gray-50"
+        class="max-w-lg p-6 rounded-md shadow-md booking-form md:p-10 dark:bg-at-dark-secondary bg-gray-50"
       >
         <BookingHeader />
-        <FleetType />
+        <!-- <FleetType /> -->
         <form @submit.prevent="handleBookings">
-          <div class="grid grid-cols-1 gap-5 pt-8 md:grid-cols-2">
+          <div class="grid grid-cols-1 gap-5 pt-8 md:grid-cols-1">
             <PickupInput />
             <DestinationInput />
             <PickupDate />
-            <PickupTime />
             <PassengersInput />
             <ReturnJourney />
             <ReturnDate />
-            <ReturnTime />
           </div>
           <Buttonview class="mt-8" text="Get quote" />
         </form>
@@ -67,4 +63,8 @@
   </main>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+  .booking-form {
+    transition: transform 0.5s ease;
+  }
+</style>

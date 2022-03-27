@@ -2,6 +2,8 @@ import { createApp } from "vue"
 import { createPinia } from "pinia"
 import "@/assets/styles/global.css"
 import "@/assets/styles/index.css"
+import Datepicker from "@vuepic/vue-datepicker"
+import "@vuepic/vue-datepicker/dist/main.css"
 
 import App from "./App.vue"
 import router from "./router"
@@ -22,6 +24,7 @@ watch(
   { deep: true }
 )
 
+app.component("date-picker", Datepicker)
 app.use(pinia)
 app.use(router)
 

@@ -1,6 +1,12 @@
 <script setup lang="ts">
   import BookingForm from "@/components/booking/BookingForm.vue"
   import PortalVew from "@/components/PortalView.vue"
+  import FleetDetails from "../components/fleets/FleetDetails.vue"
+  import { useModal } from "@/composables/useModal"
+
+  const modal = useModal()
+
+  const { toggleModal } = modal
 </script>
 
 <template>
@@ -11,12 +17,14 @@
       </div>
     </div>
     <teleport to="#portal-root">
-      <PortalVew />
+      <PortalVew>
+        <FleetDetails :toggleModal="toggleModal" />
+      </PortalVew>
     </teleport>
   </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   /* .home {
     background: url("../assets/images/woman-on-phone.jpeg");
     background-repeat: no-repeat;
@@ -25,8 +33,4 @@
     width: 100%;
     height: 100vh;
   } */
-
-  label {
-    color: rgb(75 85 99);
-  }
 </style>

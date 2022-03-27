@@ -12,7 +12,7 @@
     v-bind:class="{ active: route.name === pathName }"
     to="/my-account/my-details"
     type="button"
-    class="flex items-center w-full p-6 mb-2 bg-white border-gray-500 shadow-md dark:bg-at-dark-primary dark:border"
+    class="flex items-center w-full p-6 mb-2 bg-white border-gray-500 shadow-md dark:bg-at-dark-primary dark:border hover:bg-gray-100"
   >
     <icon-user class="mr-4 text-2xl" />
     <h1 class="text-lg">My details</h1>

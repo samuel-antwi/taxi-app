@@ -5,17 +5,21 @@
 
   const modal = useModal()
 
-  const { showModal, toggleModal } = modal
+  const { showTestModal, toggleTetModal } = modal
 </script>
 
 <template>
-  <div @click.self="toggleModal" v-if="showModal" class="backdrop">
+  <div
+    @click.self="toggleTetModal"
+    v-if="showTestModal"
+    class="backdrop"
+  >
     <div
       class="bg-white dark:bg-at-dark-secondary dark:text-gray-400 rounded-xl modal-content"
     >
       <div class="relative">
         <button
-          @click="toggleModal"
+          @click="toggleTetModal"
           class="absolute flex items-center justify-center w-8 h-8 p-1 transition duration-300 ease-in-out rounded-full dark:hover:bg-at-dark-primary hover:bg-gray-300 top-3 right-3"
         >
           <IconClose

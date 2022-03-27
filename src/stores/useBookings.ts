@@ -14,7 +14,7 @@ export const useBookingsStore = defineStore("booking", {
       destinationAddressList: [] as unknown as AddressType,
       pickupAddress: "",
       destinationAddress: "",
-      date: "",
+      date: new Date(),
       time: "",
       numberOfPassengers: 1,
       returnJourney: false,

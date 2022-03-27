@@ -1,8 +1,5 @@
 <script setup lang="ts">
   import IconPayment from "~icons/mdi/credit-card-outline"
-  import PaypalPayment from "@/components/accounts/payments/PaypalPayment.vue"
-  import ApplePay from "@/components/accounts/payments/ApplePay.vue"
-  import GooglePay from "@/components/accounts/payments/GooglePay.vue"
   import SideNav from "../components/accounts/SideNav.vue"
 </script>
 
@@ -12,20 +9,19 @@
   >
     <side-nav class="col-span-1" />
 
-    <div class="col-span-2 p-8 bg-gray-100 shadow-lg account-payment">
+    <div class="col-span-2 account-wrapper account-payment">
       <div>
         <icon-payment class="mb-4 text-4xl" />
-        <h1
-          class="text-3xl font-bold tracking-wider text-gray-700 uppercase"
-        >
+        <h1 class="text-2xl font-bold tracking-widest uppercase">
           Payment methods
         </h1>
-        <p class="pt-4 mb-8 text-gray-700">
-          Below are your payment methods.
-        </p>
-        <paypal-payment />
-        <apple-pay />
-        <google-pay />
+        <router-link :to="{ name: 'add-payment-method' }">
+          <button
+            class="uppercase border-2 text[1rem] hover:bg-gray-100 border-gray-300 py-3 px-10 tracking-wider font-semibold my-4"
+          >
+            Add new payment method
+          </button>
+        </router-link>
       </div>
     </div>
   </div>

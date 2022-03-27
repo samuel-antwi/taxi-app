@@ -25,7 +25,7 @@
       class="flex justify-between mb-1 text-sm font-semibold uppercase"
       for="pickup"
     >
-      <span>PICKUP</span>
+      <h1>Pickup Address</h1>
       <button
         @click="clearAddress(journeyDetails.pickupAddress)"
         v-if="journeyDetails.pickupAddress"
@@ -50,7 +50,7 @@
           type="text"
           v-model="journeyDetails.pickupPostcode"
         />
-        <div class="absolute text-gray-500 top-[14px] right-[16px]">
+        <div class="absolute text-gray-500 top-[30%] right-5">
           <button
             @click="journeyDetails.pickupPostcode = ''"
             v-if="journeyDetails.pickupPostcode"

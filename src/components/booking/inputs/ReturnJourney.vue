@@ -6,7 +6,7 @@
 </script>
 
 <template>
-  <div class="flex items-center mb-3 space-x-4 md:mb-0">
+  <div class="flex items-center pb-5 space-x-4 border-b">
     <h3>Return journey ?</h3>
     <Switch
       v-model="journeyDetails.returnJourney"

@@ -9,7 +9,7 @@
     v-bind:class="{ active: route.name === 'bookings' }"
     to="/my-account/my-bookings"
     type="button"
-    class="flex items-center w-full p-6 mb-2 bg-white border-gray-500 shadow-md dark:bg-at-dark-primary dark:border"
+    class="flex items-center w-full p-6 mb-2 bg-white border-gray-500 shadow-md hover:bg-gray-100 dark:bg-at-dark-primary dark:border"
   >
     <icon-taxi class="mr-4 text-2xl" />
     <h1 class="text-lg">My bookings</h1>

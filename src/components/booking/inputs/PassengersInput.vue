@@ -19,9 +19,14 @@
 </script>
 
 <template>
-  <div class="py-8">
-    <div class="flex items-center space-x-10">
-      <h3>Passengers</h3>
+  <div class="py-5 border-b">
+    <div class="flex items-center">
+      <div class="mr-4">
+        <h3 v-if="journeyDetails.numberOfPassengers === 1">
+          Passenger
+        </h3>
+        <h3 v-else>Passengers</h3>
+      </div>
       <div class="flex items-center space-x-5">
         <button
           @click="decreasePassengers"

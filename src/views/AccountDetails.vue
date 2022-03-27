@@ -23,14 +23,12 @@
 
 <template>
   <div
-    class="grid max-w-6xl min-h-screen grid-cols-1 gap-8 px-4 pt-32 mx-auto md:grid-cols-3"
+    class="max-w-6xl min-h-screen px-4 pt-32 mx-auto md:grid md:gap-8 md:grid-cols-3"
   >
-    <side-nav class="col-span-1" />
-    <div
-      class="col-span-2 p-8 bg-white border-gray-500 rounded-md shadow-lg dark:border dark:text-gray-200 dark:bg-at-dark-primary account-details"
-    >
+    <side-nav class="col-span-1 mb-10 md:mb-0" />
+    <div class="col-span-2 p-8 account-wrapper account-details">
       <div>
-        <div class="text-gray-700 dark:text-gray-200">
+        <div class="text-gray-700 dark:text-current">
           <icon-user class="mb-4 text-4xl" />
           <h1 class="text-3xl font-bold tracking-wider uppercase">
             My details
@@ -45,9 +43,7 @@
             @submit.prevent="handleUpdate"
           >
             <div class="flex flex-col mb-6">
-              <label
-                class="mb-3 font-semibold tracking-wider text-gray-600 uppercase"
-                for="first name"
+              <label class="mb-3 uppercase" for="first name"
                 >First name:</label
               >
               <input
@@ -58,9 +54,7 @@
               />
             </div>
             <div class="flex flex-col mb-6">
-              <label
-                class="mb-3 font-semibold tracking-wider text-gray-600 uppercase"
-                for="last name"
+              <label class="mb-3 uppercase" for="last name"
                 >Last name:</label
               >
               <input
@@ -71,9 +65,7 @@
               />
             </div>
             <div class="flex flex-col mb-6">
-              <label
-                class="mb-3 font-semibold tracking-wider text-gray-600"
-                for="email"
+              <label class="mb-3 uppercase" for="email"
                 >Email address:</label
               >
               <input
@@ -85,9 +77,7 @@
               />
             </div>
             <div class="flex flex-col mb-6">
-              <label
-                class="mb-3 font-semibold tracking-wider text-gray-600 uppercase"
-                for="mobile"
+              <label class="mb-3 uppercase" for="mobile"
                 >Mobile phone:</label
               >
               <input
